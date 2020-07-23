@@ -59,13 +59,15 @@ function create_block_document_block_init()
 		[],
 		filemtime( "$dir/$style_css" )
 	);
+	if ( !WP_Block_Type_Registry::get_instance()->is_registered( 'embedpress/document' ) ) {
+		register_block_type( 'block/document', [
+			'editor_script' => 'create-block-document-block-editor',
+			'editor_style'  => 'create-block-document-block-editor',
+			'script'        => ['document-pdf-object'],
+			'style'         => 'create-block-document-block',
+		] );
+	}
 
-	register_block_type( 'block/document', [
-		'editor_script' => 'create-block-document-block-editor',
-		'editor_style'  => 'create-block-document-block-editor',
-		'script'        => ['document-pdf-object'],
-		'style'         => 'create-block-document-block',
-	] );
 }
 
 add_action( 'init', 'create_block_document_block_init' );

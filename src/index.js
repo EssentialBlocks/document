@@ -32,7 +32,7 @@ registerBlockType('block/document', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
 	title: __('Document'), // Block title.
 	icon: DocumentIcon, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: 'widgets', // Block category — Group blocks together based on common traits E.g. common, formatting, layout Widgets, embed.
+	category: 'embed', // Block category — Group blocks together based on common traits E.g. common, formatting, layout Widgets, embed.
 	keywords: [
 		__('pdf'),
 		__('doc'),

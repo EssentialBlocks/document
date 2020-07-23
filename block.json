@@ -1,10 +1,10 @@
 {
 	"name": "block/document",
 	"title": "Document",
-	"category": "widgets",
+	"category": "embed",
 	"icon": "smiley",
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"textdomain": "create-block",
+	"textdomain": "document",
 	"supports": {
 		"html": false
 	},

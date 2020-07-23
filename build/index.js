@@ -987,7 +987,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_6__["registerBlockType"])('blo
   // Block title.
   icon: _icons__WEBPACK_IMPORTED_MODULE_4__["DocumentIcon"],
   // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-  category: 'widgets',
+  category: 'embed',
   // Block category — Group blocks together based on common traits E.g. common, formatting, layout Widgets, embed.
   keywords: [Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('pdf'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('doc'), Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_5__["__"])('ppt')],
   supports: {
