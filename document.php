@@ -6,9 +6,9 @@
  * Author:          WPDeveloper
  * License:         GPL-3.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:     create-block
+ * Text Domain:     document
  *
- * @package         create-block
+ * @package         document
  */
 
 /**
