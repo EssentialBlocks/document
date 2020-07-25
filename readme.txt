@@ -1,13 +1,13 @@
-=== Document ===
-Contributors: wpdevteam, re_enter_rupok, Asif2BD, alam789
-Tags: block, blocks, document, documents, pdf, gutenberg, gutenberg blocks
-Requires at least: 5.0
+=== Document - Upload & Embed Docs, PDF, PPT, XLS or Any Documents ===
+Contributors: wpdevteam, manzurahammed, re_enter_rupok, Asif2BD, EmbedPress, alam789
+Tags: document, embed, doc, upload, documents, pdf, gutenberg, ppt, docs, xls, gutenberg blocks
+Requires at least: 5.2
 Tested up to: 5.5
 Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Embed Docs, PDF, PPT, XLS or Any Documents Without Any Coding
+Upload & Embed Docs, PDF, PPT, XLS or Any Documents Without Any Coding
 
 == Description ==
 
@@ -46,6 +46,8 @@ This Block is brought to you by [WPDeveloper](https://wpdeveloper.net), the team
 Consider checking out our other WordPress solutions & boost your WordPress website:
 
 🔝 [Essential Addons For Elementor](https://wordpress.org/plugins/essential-addons-for-elementor-lite/): Most popular Elementor addons with 70+ widgets & ready blocks
+
+📄 [EmbedPress](https://wordpress.org/plugins/embedpress/): EmbedPress lets you embed videos, images, posts, audio, maps and upload PDF, DOC, PPT & all other types of content into your WordPress site with one-click and showcase it beautifully for the visitors. 
 
 ☁ [Templately](https://wordpress.org/plugins/templately/): Free templates library for Elementor & Gutenberg along with the cloud collaboration for WordPress
 

@@ -1,14 +1,16 @@
 <?php
 /**
  * Plugin Name:     Document
+ * Plugin URI: 		https://embedpress.com/
  * Description:     Embed Docs, PDF, PPT, XLS or Any Documents Without Any Coding
  * Version:         1.0.0
- * Author:          WPDeveloper
+ * Author:          EmbedPress
+ * Author URI: 		https://embedpress.com/
  * License:         GPL-3.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain:     create-block
+ * Text Domain:     document
  *
- * @package         create-block
+ * @package         document
  */
 
 /**
