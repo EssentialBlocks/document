@@ -1,4 +1,4 @@
-=== Document - Upload & Embed Docs, PDF, PPT, XLS or Any Documents ===
+=== Document Block - Upload & Embed Docs, PDF, PPT, XLS or Any Documents ===
 Contributors: wpdevteam, manzurahammed, re_enter_rupok, Asif2BD, EmbedPress, alam789
 Tags: document, embed, doc, upload, documents, pdf, gutenberg, ppt, docs, xls, gutenberg blocks
 Requires at least: 5.2
@@ -12,6 +12,8 @@ Upload & Embed Docs, PDF, PPT, XLS or Any Documents Without Any Coding
 == Description ==
 
 Want to embed documents in your WordPress site & don’t know how to do it? Well, you don’t have to know at all if you have this block plugin.
+
+**Here you have Document Block By [EmbedPress](https://embedpress.com/), The Best Plugin to Embed Anything in WordPress**
 
 It will let you instantly embed any type of documents without any hassle. You don’t need any coding or anything, just upload the document & it will automatically preview it on your website. 
 
@@ -28,7 +30,7 @@ This Block is brought to you by [WPDeveloper](https://wpdeveloper.net), the team
 
 ## 👨‍💻 DOCUMENTATION AND SUPPORT ##
 
-- For documentation and tutorials go to our [documentation](https://essential-blocks.com/docs/)
+- For documentation and tutorials go to our [documentation](https://embedpress.com/docs/embed-document/)
 - To report issue and contribution visit [Github](https://github.com/EssentialBlocks/document).
 - If you have any more questions, visit our support on the [Plugin's Forum](https://wordpress.org/support/plugin/document).
 - For more information about features, FAQs and documentation, check out our website at [WPDeveloper](https://wpdeveloper.net/).
