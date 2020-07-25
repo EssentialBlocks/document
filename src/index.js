@@ -1,5 +1,5 @@
 /**
- * BLOCK: embedpress-blocks
+ * BLOCK: Document
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
