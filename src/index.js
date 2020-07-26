@@ -8,10 +8,11 @@
 //  Import CSS.
 import './style.scss';
 import './editor.scss';
-import edit from './edit';
+import Edit from './edit';
 import save from './save';
+
 import {DocumentIcon} from './icons';
-import { __ } from '@wordpress/i18n';
+import {__} from '@wordpress/i18n';
 import {registerBlockType} from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
 
 
@@ -38,10 +39,7 @@ registerBlockType('block/document', {
 		__('doc'),
 		__('ppt'),
 	],
-	supports: {
-		align: true,
-		lightBlockWrapper: true,
-	},
+	supports: {align: ["wide", "full"], default: ''},
 	attributes: {
 		id: {
 			type: "string"
@@ -76,7 +74,7 @@ registerBlockType('block/document', {
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
-	edit,
+	edit: Edit,
 
 	/**
 	 * The save function defines the way in which the different attributes should be combined

@@ -1,14 +1,10 @@
 {
-	"name": "block/document",
-	"title": "Document",
-	"category": "embed",
-	"icon": "smiley",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"textdomain": "document",
-	"supports": {
-		"html": false
-	},
-	"editorScript": "file:./build/index.js",
-	"editorStyle": "file:./build/index.css",
-	"style": "file:./build/style-index.css"
+  "name": "block/document",
+  "title": "Document",
+  "category": "embed",
+  "description": "",
+  "textdomain": "document",
+  "editorScript": "file:./build/index.js",
+  "editorStyle": "file:./build/index.css",
+  "style": "file:./build/style-index.css"
 }

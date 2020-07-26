@@ -2,11 +2,11 @@
  * WordPress dependencies
  */
 
-import { __ } from '@wordpress/i18n';
+import {__} from '@wordpress/i18n';
 import {getBlobByURL, isBlobURL, revokeBlobURL} from '@wordpress/blob';
-import {BlockIcon, MediaPlaceholder ,InspectorControls} from '@wordpress/editor';
+import {BlockIcon, MediaPlaceholder, InspectorControls} from '@wordpress/block-editor';
 import {Component, Fragment} from '@wordpress/element';
-import {RangeControl,PanelBody, ExternalLink,ToggleControl } from '@wordpress/components';
+import {RangeControl, PanelBody, ExternalLink, ToggleControl} from '@wordpress/components';
 import {DocumentIcon} from './icons'
 
 const ALLOWED_MEDIA_TYPES = [
@@ -19,16 +19,16 @@ const ALLOWED_MEDIA_TYPES = [
 	'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 ];
 
-class DocumentEdit extends Component {
+class Edit extends Component {
 	constructor() {
 		super(...arguments);
-		this.onSelectFile = this.onSelectFile.bind(this);
+		this.onSelectFile  = this.onSelectFile.bind(this);
 		this.onUploadError = this.onUploadError.bind(this);
-		this.onLoad = this.onLoad.bind(this);
-		this.hideOverlay = this.hideOverlay.bind(this);
-		this.state = {
+		this.onLoad        = this.onLoad.bind(this);
+		this.hideOverlay   = this.hideOverlay.bind(this);
+		this.state         = {
 			hasError: false,
-			fetching:false,
+			fetching: false,
 			interactive: false,
 			loadPdf: true,
 		};
@@ -36,10 +36,10 @@ class DocumentEdit extends Component {
 
 	componentDidMount() {
 		const {
-			attributes,
-			mediaUpload,
-			noticeOperations
-		} = this.props;
+			      attributes,
+			      mediaUpload,
+			      noticeOperations
+		      }      = this.props;
 		const {href} = attributes;
 
 		// Upload a file drag-and-dropped into the editor
@@ -58,9 +58,9 @@ class DocumentEdit extends Component {
 			revokeBlobURL(href);
 		}
 
-		if(this.props.attributes.href && this.props.attributes.mime === 'application/pdf' && this.state.loadPdf){
+		if (this.props.attributes.href && this.props.attributes.mime === 'application/pdf' && this.state.loadPdf) {
 			this.setState({loadPdf: false});
-			PDFObject.embed(this.props.attributes.href, "."+this.props.attributes.id);
+			PDFObject.embed(this.props.attributes.href, "." + this.props.attributes.id);
 		}
 
 	}
@@ -88,7 +88,7 @@ class DocumentEdit extends Component {
 
 	onLoad() {
 		this.setState({
-			fetching:false
+			fetching: false
 		})
 	}
 
@@ -98,13 +98,13 @@ class DocumentEdit extends Component {
 			this.props.setAttributes({
 				href: media.url,
 				fileName: media.title,
-				id: 'embedpress-pdf-'+Date.now(),
+				id: 'embedpress-pdf-' + Date.now(),
 				mime: media.mime,
 			});
 
-			if(media.mime === 'application/pdf'){
+			if (media.mime === 'application/pdf') {
 				this.setState({loadPdf: false});
-				PDFObject.embed(media.url, "."+this.props.attributes.id);
+				PDFObject.embed(media.url, "." + this.props.attributes.id);
 			}
 		}
 
@@ -117,95 +117,99 @@ class DocumentEdit extends Component {
 	}
 
 	render() {
-		const {attributes, noticeUI,setAttributes} = this.props;
-		const {href,mime,id,width,height,powered_by} = attributes;
-		const {hasError,interactive,fetching,loadPdf} = this.state;
-		const min = 1;
-		const max = 1000;
-		const docLink = 'https://embedpress.com/docs/embed-docuemnt/'
+		const {attributes, noticeUI, setAttributes}       = this.props;
+		const {href, mime, id, width, height, powered_by} = attributes;
+		const {hasError, interactive, fetching, loadPdf}  = this.state;
+		const min                                         = 1;
+		const max                                         = 1000;
+		const docLink                                     = 'https://embedpress.com/docs/embed-docuemnt/'
 		if (!href || hasError) {
-
-			return (
-				<div className={"embedpress-document-editmode"}>
-					<MediaPlaceholder
-						icon={<BlockIcon icon={DocumentIcon}/>}
-						labels={{
-							title: __('Document'),
-							instructions: __(
-								'Upload a file or pick one from your media library for embed.'
-							),
-						}}
-						onSelect={this.onSelectFile}
-						notices={noticeUI}
-						allowedTypes={ALLOWED_MEDIA_TYPES}
-						onError={this.onUploadError}
-
-					>
-
-						<div style={{width:'100%'}} className="components-placeholder__learn-more embedpress-doc-link">
-							<ExternalLink href={docLink}>Learn more about Embedded document </ExternalLink>
-						</div>
-					</MediaPlaceholder>
-
-				</div>
-
-			);
-		} else {
-			const url = '//view.officeapps.live.com/op/embed.aspx?src='+href;
 			return (
 				<Fragment>
-					{ mime === 'application/pdf' && (
-						<div style={{height:height,width:width}} className={'embedpress-embed-document-pdf'+' '+id} data-emid={id} data-emsrc={href}></div>
+					<div className={"embedpress-document-editmode"}>
+						<MediaPlaceholder
+							icon={<BlockIcon icon={DocumentIcon}/>}
+							labels={{
+								title: __('Document'),
+								instructions: __(
+									'Upload a file or pick one from your media library for embed.'
+								),
+							}}
+							onSelect={this.onSelectFile}
+							notices={noticeUI}
+							allowedTypes={ALLOWED_MEDIA_TYPES}
+							onError={this.onUploadError}
+						>
 
-					) }
-					{ mime !== 'application/pdf' && (
-						<iframe onMouseUponMouseUp={ this.hideOverlay } style={{height:height,width:width,display: fetching || !loadPdf ? 'none' : ''}} onLoad={this.onLoad} src={url}
-								mozallowfullscreen="true" webkitallowfullscreen="true"/>
-					) }
-					{ ! interactive && (
+							<div style={{width: '100%'}}
+							     className="components-placeholder__learn-more embedpress-doc-link">
+								<ExternalLink href={docLink}>Learn more about Embedded document </ExternalLink>
+							</div>
+						</MediaPlaceholder>
+
+					</div>
+				</Fragment>
+			);
+		} else {
+			const url = '//view.officeapps.live.com/op/embed.aspx?src=' + href;
+			return (
+				<Fragment>
+					{mime === 'application/pdf' && (
+						<div style={{height: height, width: width}}
+						     className={'embedpress-embed-document-pdf' + ' ' + id} data-emid={id}
+						     data-emsrc={href}></div>
+
+					)}
+					{mime !== 'application/pdf' && (
+						<iframe onMouseUponMouseUp={this.hideOverlay}
+						        style={{height: height, width: width, display: fetching || !loadPdf ? 'none' : ''}}
+						        onLoad={this.onLoad} src={url}
+						        mozallowfullscreen="true" webkitallowfullscreen="true"/>
+					)}
+					{!interactive && (
 						<div
 							className="block-library-embed__interactive-overlay"
-							onMouseUp={ this.hideOverlay }
+							onMouseUp={this.hideOverlay}
 						/>
-					) }
-					{ powered_by && (
+					)}
+					{powered_by && (
 						<p className="embedpress-el-powered">Powered By EmbedPress</p>
 					)}
 
 					<InspectorControls key="inspector">
 						<PanelBody
-							title={ __( 'Embed Size', 'embedpress' ) }
+							title={__('Embed Size', 'embedpress')}
 						>
 							<RangeControl
-								label={ __(
+								label={__(
 									'Width',
 									'embedpress'
-								) }
-								value={ width }
-								onChange={ ( width ) =>
-									setAttributes( { width } )
+								)}
+								value={width}
+								onChange={(width) =>
+									setAttributes({width})
 								}
-								max={ max }
-								min={ min }
+								max={max}
+								min={min}
 							/>
 							<RangeControl
-								label={ __(
+								label={__(
 									'Height',
 									'embedpress'
-								) }
-								value={height }
-								onChange={ ( height ) =>
-									setAttributes( { height } )
+								)}
+								value={height}
+								onChange={(height) =>
+									setAttributes({height})
 								}
-								max={ max }
-								min={ min }
+								max={max}
+								min={min}
 							/>
 							<ToggleControl
-								label={ __( 'Powered By' ) }
-								onChange={ ( powered_by ) =>
-									setAttributes( { powered_by } )
+								label={__('Powered By')}
+								onChange={(powered_by) =>
+									setAttributes({powered_by})
 								}
-								checked={ powered_by }
+								checked={powered_by}
 							/>
 						</PanelBody>
 					</InspectorControls>
@@ -215,4 +219,4 @@ class DocumentEdit extends Component {
 	}
 };
 
-export default DocumentEdit;
+export default Edit;
