@@ -87,7 +87,7 @@ Yes, it will work with any standard WordPress theme.
 
 == Changelog ==
 
-= 1.1.0 - 16/08/2022 =
+= 1.1.0 - 21/08/2022 =
 * Fixed: Some js errors
 * Fixed: Added url encode for office doc viewer
 
