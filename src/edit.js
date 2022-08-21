@@ -151,7 +151,7 @@ class Edit extends Component {
 				</Fragment>
 			);
 		} else {
-			const url = '//view.officeapps.live.com/op/embed.aspx?src=' + href;
+			const url = '//view.officeapps.live.com/op/embed.aspx?src=' + encodeURI(href);
 			return (
 				<Fragment>
 					{mime === 'application/pdf' && (
@@ -161,7 +161,7 @@ class Edit extends Component {
 
 					)}
 					{mime !== 'application/pdf' && (
-						<iframe onMouseUponMouseUp={this.hideOverlay}
+						<iframe onMouseUp={this.hideOverlay}
 						        style={{height: height, width: width, display: fetching || !loadPdf ? 'none' : ''}}
 						        onLoad={this.onLoad} src={url}
 						        mozallowfullscreen="true" webkitallowfullscreen="true"/>

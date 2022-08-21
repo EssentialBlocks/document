@@ -1,9 +1,9 @@
 === Document Block - Upload & Embed Docs, PDF, PPT, XLS or Any Documents ===
-Contributors: wpdevteam, manzurahammed, re_enter_rupok, Asif2BD, EmbedPress, alam789
+Contributors: wpdevteam, re_enter_rupok, Asif2BD, EmbedPress, manzurahammed, rahat89
 Tags: document, embed, doc, upload, documents, pdf, gutenberg, ppt, docs, xls, gutenberg blocks
-Requires at least: 5.2
-Tested up to: 5.5
-Stable tag: 1.0.1
+Requires at least: 5.6
+Tested up to: 6.0
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -15,7 +15,7 @@ Want to embed documents in your WordPress site & don’t know how to do it? Well
 
 **Here you have Document Block By [EmbedPress](https://embedpress.com/), The Best Plugin to Embed Anything in WordPress**
 
-It will let you instantly embed any type of documents without any hassle. You don’t need any coding or anything, just upload the document & it will automatically preview it on your website. 
+It will let you instantly embed any type of documents without any hassle. You don’t need any coding or anything, just upload the document & it will automatically preview it on your website.
 
 You can embed Docs, PDF, PPT, XLS etc and make your website interactive for the audience without putting extra efforts.
 
@@ -24,7 +24,7 @@ You can embed Docs, PDF, PPT, XLS etc and make your website interactive for the 
 **Dedicated Support:** We’ve an extraordinary support team ready to help you. Ask your questions in the support forum, we’ll get back to you immediately.
 
 
-## 🚀 BACKED BY A TRUSTED TEAM ## 
+## 🚀 BACKED BY A TRUSTED TEAM ##
 
 This Block is brought to you by [WPDeveloper](https://wpdeveloper.net), the team behind the most popular elements library [Essential Addons for Elementor](https://wordpress.org/plugins/essential-addons-for-elementor-lite/) (used by almost 700,000 happy users from 180+ countries).
 
@@ -49,7 +49,7 @@ Consider checking out our other WordPress solutions & boost your WordPress websi
 
 🔝 [Essential Addons For Elementor](https://wordpress.org/plugins/essential-addons-for-elementor-lite/): Most popular Elementor addons with 70+ widgets & ready blocks
 
-📄 [EmbedPress](https://wordpress.org/plugins/embedpress/): EmbedPress lets you embed videos, images, posts, audio, maps and upload PDF, DOC, PPT & all other types of content into your WordPress site with one-click and showcase it beautifully for the visitors. 
+📄 [EmbedPress](https://wordpress.org/plugins/embedpress/): EmbedPress lets you embed videos, images, posts, audio, maps and upload PDF, DOC, PPT & all other types of content into your WordPress site with one-click and showcase it beautifully for the visitors.
 
 ☁ [Templately](https://wordpress.org/plugins/templately/): Free templates library for Elementor & Gutenberg along with the cloud collaboration for WordPress
 
@@ -67,7 +67,7 @@ Consider checking out our other WordPress solutions & boost your WordPress websi
 
 = Modern Way: =
 1. Go to the WordPress Block/Gutenberg Editor
-2. Search For "Document". 
+2. Search For "Document".
 3. Install in 1-click
 
 = Old Way: =
@@ -87,11 +87,15 @@ Yes, it will work with any standard WordPress theme.
 
 == Changelog ==
 
-= 1.0.1 - 2020-07-27 =
+= 1.1.0 - 16/08/2022 =
+* Fixed: Some js errors
+* Fixed: Added url encode for office doc viewer
+
+= 1.0.1 - 27/07/2020 =
 * Bug fix, with more control
 
 = 1.0.0 =
 * Initial Release
 
 == Upgrade Notice ==
-[Must Update] Bug fix, with more control
+[Minor Update] Bug fix and stability

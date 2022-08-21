@@ -3,7 +3,7 @@
  * Plugin Name:     Document
  * Plugin URI: 		https://embedpress.com/
  * Description:     Embed Docs, PDF, PPT, XLS or Any Documents Without Any Coding
- * Version:         1.0.1
+ * Version:         1.1.0
  * Author:          EmbedPress
  * Author URI: 		https://embedpress.com/
  * License:         GPL-3.0-or-later
