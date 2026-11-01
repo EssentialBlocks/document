@@ -67,6 +67,15 @@ class Edit extends Component {
 
 	componentDidUpdate(prevProps) {
 
+		// The PDF container only exists after a file is chosen and the block has re-rendered,
+		// so embed here. (It used to be embedded straight after setAttributes, into
+		// ".undefined" or an element that was not rendered yet.)
+		const {href, mime, id} = this.props.attributes;
+		if (mime === 'application/pdf' && href && id &&
+			(prevProps.attributes.href !== href || prevProps.attributes.id !== id)) {
+			PDFObject.embed(href, "." + id);
+		}
+
 		// Reset copy confirmation state when block is deselected
 		if (prevProps.isSelected && !this.props.isSelected) {
 			this.setState({showCopyConfirmation: false});
@@ -104,7 +113,6 @@ class Edit extends Component {
 
 			if (media.mime === 'application/pdf') {
 				this.setState({loadPdf: false});
-				PDFObject.embed(media.url, "." + this.props.attributes.id);
 			}
 		}
 
@@ -151,7 +159,7 @@ class Edit extends Component {
 				</Fragment>
 			);
 		} else {
-			const url = '//view.officeapps.live.com/op/embed.aspx?src=' + encodeURI(href);
+			const url = '//view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(href);
 			return (
 				<Fragment>
 					{mime === 'application/pdf' && (

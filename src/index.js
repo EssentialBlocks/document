@@ -10,11 +10,39 @@ import './style.scss';
 import './editor.scss';
 import Edit from './edit';
 import save from './save';
+import saveV1 from './deprecated';
 
 import {DocumentIcon} from './icons';
 import {__} from '@wordpress/i18n';
 import {registerBlockType} from '@wordpress/blocks'; // Import registerBlockType() from wp.blocks
 
+
+const attributes = {
+	id: {
+		type: "string"
+	},
+	href: {
+		type: "string"
+	},
+	powered_by: {
+		type: "boolean",
+		default: true,
+	},
+	width: {
+		type: 'number',
+		default: 600,
+	},
+	height: {
+		type: 'number',
+		default: 600,
+	},
+	fileName: {
+		type: "string",
+	},
+	mime: {
+		type: "string",
+	}
+};
 
 /**
  * Register: aa Gutenberg Block.
@@ -40,32 +68,8 @@ registerBlockType('block/document', {
 		__('ppt'),
 	],
 	supports: {align: ["wide", "full"], default: ''},
-	attributes: {
-		id: {
-			type: "string"
-		},
-		href: {
-			type: "string"
-		},
-		powered_by: {
-			type: "boolean",
-			default: true,
-		},
-		width: {
-			type: 'number',
-			default: 600,
-		},
-		height: {
-			type: 'number',
-			default: 600,
-		},
-		fileName: {
-			type: "string",
-		},
-		mime: {
-			type: "string",
-		}
-	},
+	attributes,
+	deprecated: [{attributes, save: saveV1}],
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
 	 * This represents what the editor will render when the block is used.

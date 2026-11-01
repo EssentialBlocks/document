@@ -10,7 +10,8 @@
 
 const save = ({attributes}) => {
 	const {href, mime, id, width, height, powered_by} = attributes
-	const iframeSrc = '//view.officeapps.live.com/op/embed.aspx?src=' + href;
+	// The file URL is a query value, so encode it (a "&" or "?" in it used to cut it short).
+	const iframeSrc = '//view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(href);
 	const defaultClass = "embedpress-embed-document"
 	return (
 		<figure className={defaultClass}>
